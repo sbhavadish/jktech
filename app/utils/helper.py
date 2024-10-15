@@ -4,12 +4,21 @@ import ollama
 from pypdf import PdfReader
 import json
 from typing import List
+from dotenv import load_dotenv
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/../')
+load_dotenv() 
+
+CHARACTER_LIMIT = 4000  # This is an example limit; adjust based on your model’s capabilities
+model = os.environ["model"]
+tesseract_cmd = os.environ["tesseract_cmd"]
 # Path to Tesseract executable if it's not in your PATH environment
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = tesseract_cmd #r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 # Define a character limit for the text to be processed at once (adjust as per the model’s input limit)
-CHARACTER_LIMIT = 4000  # This is an example limit; adjust based on your model’s capabilities
-model='llama3.1'
+
+
 def extract_text_from_pdf_using_pypdf2(pdf_file_path):
     """Attempt to extract text directly from the PDF using PyPDF2."""
     reader = PdfReader(pdf_file_path)

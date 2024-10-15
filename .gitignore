@@ -10,7 +10,6 @@ __pycache__/
 .idea/
 
 # Environment variables
-.env
 
 # Python distribution files
 *.egg-info/

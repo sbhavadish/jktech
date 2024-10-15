@@ -13,7 +13,7 @@ db_name = os.environ["db_name"]
 db_port = 5432  
 # Create the database engine
 DATABASE_URL = f"postgresql+asyncpg://{db_usr}:{db_pwd}@{db_host}:{db_port}/{db_name}"
-print(DATABASE_URL)
+# print(DATABASE_URL)
 # Define the Base class
 Base = declarative_base()
 # Create asynchronous engine
