@@ -1,4 +1,3 @@
-
 # Books Review Project with Ollama Integration
 
 Welcome to the Books Review Project! This project enables users to manage books and their reviews by utilizing the integration of Ollama and Tesseract, allowing for the processing of scanned PDFs and images to enhance functionality. Below, you will find detailed installation instructions, project setup, and usage guidelines.
@@ -110,12 +109,8 @@ To install Tesseract OCR, follow these instructions based on your operating syst
 Ensure you have the following database configuration in your environment:
 
 ```plaintext
-db_host=db.postgres.database.azure.com
-db_port=5432
-db_name=jktech
-db_pwd=arxt%40123
-db_usr=postgres
-MIGRATION_DATABASE_URL=postgresql+psycopg2://postgres:arxt%%40123@db.postgres.database.azure.com:5432/jktech
+DATABASE_URL = postgresql+asyncpg://postgres:Bnmqwe%40007@localhost:5432/jktech
+MIGRATION_DATABASE_URL=postgresql+psycopg2://postgres:Bnmqwe%%40007@localhost:5432/jktech
 ```
 
 ## Security Configuration
